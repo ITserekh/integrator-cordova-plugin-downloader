@@ -81,9 +81,6 @@ public class Downloader extends CordovaPlugin {
     protected boolean download(JSONObject obj, CallbackContext callbackContext) throws JSONException {
 
         DownloadManager.Request request = deserialiseRequest(obj);
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, obj.optString("title"));
-        }
 
         IntentFilter intentFilter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
 
