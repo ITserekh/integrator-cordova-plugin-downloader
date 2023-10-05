@@ -22,7 +22,6 @@ import android.content.pm.PackageManager;
 import android.Manifest;
 
 import android.os.Build;
-import android.os.Environment;
 
 public class Downloader extends CordovaPlugin {
 
